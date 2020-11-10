@@ -1,1 +1,12 @@
 https://thebook.io/007029/
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+import csv
+f = open("/content/drive/My Drive/Colab Notebooks/모두의 데이터 분석 with 파이썬/seoul.csv", "r", encoding="cp949")
+data = csv.reader(f, delimiter=",")
+
+header = next(data)    
+print(header)          
+f.close()
